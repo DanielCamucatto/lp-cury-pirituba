@@ -1,0 +1,125 @@
+.container {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-bg-station) !important;
+  padding-top: 100px;
+  position: fixed;
+  top: -80px;
+  left: 0px;
+  width: 100vw;
+  min-height: calc(100vh + 80px);
+  background-color: var(--color-body);
+  z-index: 9999;
+
+  @keyframes openModal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &[data-show="true"] {
+    display: flex;
+    will-change: opacity, display;
+    animation: openModal 0.3s forwards ease;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: var(--grande);
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h2 {
+    font-size: var(--extra-medio);
+  }
+
+  select,
+  input {
+    width: 100%;
+    padding: 10px 5px;
+    outline: 0;
+  }
+}
+
+.buttonClose {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  border-radius: 7px;
+  background-color: var(--color-bg-cta);
+  outline: none;
+  font-size: var(--grande);
+  font-weight: var(--weight-boldl);
+  box-shadow: 4px 4px 5px #55555555;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+  }
+}
+
+.sectionActive {
+  display: block !important;
+}
+
+.sections {
+  position: relative;
+  max-width: 600px;
+  display: flex;
+  width: 100%;
+
+  > div {
+    display: none;
+    flex-direction: column;
+    padding: 0px 40px;
+    transition: left 0.5s;
+
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttonContinue {
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 42px;
+  border: solid 1px #ddd;
+  min-width: 200px;
+  background: var(--color-bg-gallery);
+  border: none;
+  outline: 0;
+  color: var(--color-white);
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    color: #ddd;
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../../styles/util/media";
+
+$small-devices: 800px;
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--espacamento_grande);
+  padding-bottom: var(--espacamento_grande);
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: var(--extra-medio);
+    text-transform: uppercase;
+    color: var(--color-bg-planos);
+    margin-bottom: var(--espacamento_pequeno);
+    padding: 0 var(--espacamento_pequeno);
+
+    @include d(tablet) {
+      font-size: var(--grande);
+
+      padding: 0;
+    }
+  }
+
+  .separator {
+    min-width: 50px;
+    min-height: 3px;
+    background-color: var(--color-two);
+    margin-bottom: var(--espacamento_extra-medio);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    flex: 1;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    font-weight: var(--weight-boldl);
+    font-size: 1.5rem;
+
+    @include d(tablet) {
+      width: 100%;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.9;
+    }
+
+    & + button {
+      margin-top: var(--espacamento_extra-medio);
+    }
+
+    @media (max-width: $small-devices) {
+      font-size: 1.2rem;
+    }
+
+    &[name="chat"] {
+      background-color: #43574f;
+    }
+
+    &[name="whatsapp"] {
+      background-color: #35c714;
+    }
+
+    &[name="financy_simulator"] {
+      background-color: #1b897f;
+    }
+  }
+}
+
+.ctas {
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  margin: 0 auto;
+
+  @include d(tablet) {
+    border: solid 2px var(--color-bg-station);
+    padding: var(--espacamento_extra-medio);
+  }
+
+  @media (min-width: $small-devices) {
+    display: flex;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,221 @@
+@import "../../../styles/util/media";
+@import "../../../styles/util/fonts";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("/images/v2/green-bar.png");
+  position: relative;
+
+  // Background
+  &::before {
+    content: "";
+    display: none;
+
+    @include d(tablet-up) {
+      display: block;
+    }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("/images/v2/green-bar.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: initial;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+
+    @include d(tablet-up) {
+      display: block;
+    }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/images/v2/green-bar.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: initial;
+    transform: rotateZ(180deg);
+  }
+}
+
+.infoMain {
+  width: calc(100% - 40px);
+
+  @include d(tablet) {
+    width: calc(100% - 120px);
+  }
+
+  background: linear-gradient(
+    180deg,
+    rgba(86, 105, 97, 1) 0%,
+    rgba(67, 87, 79, 1) 49%,
+    rgba(67, 87, 79, 1) 100%
+  );
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  padding-top: var(--espacamento_grande);
+  padding-bottom: var(--espacamento_grande);
+}
+
+.infoMainLine2 {
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    font-size: var(--grande);
+    font-weight: var(--weight-boldl);
+  }
+
+  span {
+    font-size: var(--extra-medio);
+    font-weight: var(--weight-regular);
+    margin-top: 0.5rem;
+    font-family: "visbyExtraBold";
+  }
+}
+
+.infoMainLine3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: left;
+  font-size: var(--medio);
+  padding-left: var(--espacamento_medio);
+  padding-right: var(--espacamento_medio);
+
+  @include d(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+  }
+
+  @include d(tablet-up) {
+    flex-wrap: nowrap;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Logo casa verde
+  &__logo {
+    margin-bottom: var(--espacamento_medio);
+
+    @include d(tablet) {
+      margin-right: var(--espacamento_extra-medio);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.infoMainLine3_renda_familiar {
+  flex-direction: row;
+
+  @include d(mobile) {
+    width: 220px;
+  }
+
+  &_logo {
+    margin-right: 0.5rem;
+  }
+
+  &_text {
+    flex-direction: column;
+
+    // Texto renda familiar
+
+    // Primeiro span
+    & > span {
+      position: relative;
+      top: 15px;
+    }
+
+    // Todos os span
+    & span {
+      font-size: var(--medio);
+      font-weight: var(--weight-regular);
+      font-family: "visbyExtraBold";
+    }
+
+    // R$ / Preço
+    & > strong {
+      font-size: var(--medio);
+
+      & span {
+        // Preço
+        &:nth-child(2) {
+          font-size: var(--gigante);
+          font-weight: var(--weight-regular);
+        }
+      }
+    }
+  }
+}
+
+.infoMainLine3_fgts {
+  display: flex;
+  font-family: "visbyExtraBold";
+
+  @include d(mobile) {
+    width: 220px;
+  }
+
+  &_logo {
+    margin-right: 0.5rem;
+  }
+
+  & p {
+    font-family: "visbyExtraBold";
+  }
+}
+
+.infoMainLine4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  margin-top: 40px;
+
+  line-height: 0px;
+  font-size: 1.2rem;
+
+  div {
+    display: flex;
+
+    span {
+      line-height: 3rem;
+    }
+
+    strong {
+      font-size: 2.3em;
+      line-height: 4rem;
+    }
+
+    div {
+      line-height: 4.6rem;
+      font-size: 2rem;
+    }
+  }
+}

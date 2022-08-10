@@ -1,0 +1,105 @@
+$small-devices: 800px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/localization-background.png");
+  padding-top: var(--espacamento_grande);
+  background: var(--color-bg-cta);
+}
+
+.separator {
+  min-width: 50px;
+  min-height: 3px;
+  background-color: var(--color-two);
+  margin-bottom: var(--espacamento_extra-medio);
+  margin-top: -0.5rem;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: var(--espacamento_pequeno);
+  padding-right: var(--espacamento_pequeno);
+
+  span {
+    font-size: var(--grande);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--color-title-corretor);
+    font-weight: var(--weight-regular);
+    line-height: lineHeight(32);
+    margin-bottom: var(--espacamento_pequeno);
+    font-family: "visbyExtraBold";
+  }
+
+  h1 {
+    font-size: var(--grande);
+    text-transform: uppercase;
+    font-weight: var(--weight-boldl);
+    color: var(--color-two);
+    font-family: "visbyExtraBold";
+  }
+}
+
+.description {
+  margin-top: var(--espacamento_pequeno);
+  max-width: 800px;
+  margin-bottom: var(--espacamento_extra-medio);
+  font-size: var(--medio);
+  font-weight: var(--weight-light);
+  padding: 0 20px;
+  color: var(--color-title-corretor);
+  line-height: lineHeight(27);
+}
+
+.address {
+  max-width: 500px;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.7333rem;
+    color: var(--color-two);
+    font-weight: var(--weight-regular);
+    text-transform: uppercase;
+    margin-bottom: var(--espacamento_pequeno);
+  }
+
+  span {
+    display: block;
+    font-weight: var(--weight-boldl);
+    font-size: var(--extra-medio);
+    text-transform: uppercase;
+    color: var(--color-title-corretor);
+    font-family: "visbyExtraBold";
+  }
+
+  span:last-child {
+    font-weight: var(--weight-light);
+    text-transform: initial;
+    font-size: var(--grande);
+    line-height: lineHeight(32);
+    margin-top: -0.5rem;
+    font-family: "visbyMedium";
+  }
+}
+
+.map {
+  flex: 1;
+  margin-top: 20px;
+  width: 100%;
+  background-color: transparent;
+
+  iframe {
+    width: 100%;
+    height: 504px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+}

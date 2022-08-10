@@ -1,0 +1,137 @@
+@import "../../../styles/util/media";
+
+.container {
+  display: flex;
+  background: url("/images/localization.png");
+  //background-color: var(--color-body);
+
+  color: white;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: var(--espacamento_grande);
+}
+
+.containerRoot {
+  width: 100%;
+
+  @include d(tablet) {
+    width: calc(100% - 120px);
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //background-color: var(--color-bg-cta);
+}
+
+.title {
+  color: var(--color-title-corretor);
+  font-size: var(--extra-medio);
+  text-transform: uppercase;
+  max-width: 280px;
+  text-align: center;
+  font-weight: var(--weight-regular);
+}
+
+.separator {
+  background-color: var(--color-two);
+  min-height: 2px;
+  min-width: 300px;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+.galleries {
+  overflow: hidden;
+  padding-bottom: 0px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.gallery {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 1s;
+
+  &[data-status="active"] {
+    position: relative;
+    padding-top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.active {
+  visibility: visible;
+  position: initial;
+}
+
+// Menu da galeria
+.navGallery {
+  & > ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+
+    @include d(tablet-up) {
+      justify-content: flex-end;
+    }
+
+    // Links
+    & li {
+      padding-bottom: 1rem;
+      position: relative;
+      color: var(--color-dark-blue);
+      font-family: "visbyDemiBold";
+
+      &:not(:nth-last-child(1)) {
+        margin-right: var(--espacamento_medio);
+
+        @media (max-width: 320px) {
+          margin-right: var(--espacamento_pequeno);
+        }
+      }
+
+      &:nth-last-child(1) {
+        margin-right: var(--espacamento_medio);
+
+        @include d(tablet-up) {
+          margin-right: 0;
+        }
+      }
+
+      & a {
+        &:hover {
+          color: var(--color-dark-blue);
+        }
+      }
+
+      &[class="active"] {
+        color: var(--color-bg-station);
+        transition: 0.3s;
+
+        & a {
+          &:hover {
+            color: var(--color-bg-station);
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 4px;
+          background: var(--color-bg-station);
+          position: absolute;
+          bottom: 0;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

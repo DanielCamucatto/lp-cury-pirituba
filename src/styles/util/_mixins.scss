@@ -1,0 +1,26 @@
+// Calc line height
+@function lineHeight($fontSize, $context: 1.5) {
+  @return $fontSize * $context + px;
+}
+
+// Centralizar elemento
+@mixin centerElement {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Animar sobras no texto
+@keyframes animTextEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Sombras no texto
+@mixin textEffect {
+  text-shadow: 1px 1px 15px #000000;
+  animation: animTextEffect 1s 1;
+}

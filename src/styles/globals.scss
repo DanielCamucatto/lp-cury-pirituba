@@ -1,0 +1,89 @@
+@import "bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+
+:root {
+  font-size: 62.5%;
+
+  // Cores
+  --color-white: #fff;
+  --color-black: #000;
+  --color-one: #cdd1d1;
+  --color-two: #50625b;
+  --color-title-color: #595959;
+  --color-title-corretor: #000;
+  --color-dark-blue: #142933;
+  --color-body: #8794aa;
+  --color-bg-planos: #43574f;
+  --color-bg-gallery: #7bbb79;
+  --color-bg-cta: #cdd1d1;
+  --color-bg-station: #454545;
+  --color-bg-btn: #e58c8c;
+
+  // Font weight
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-boldl: 700;
+
+  // Tamanho fontes
+  --pequeno: 1rem;
+  --normal: 1.6rem;
+  --medio: 2rem;
+  --extra-medio: 2.5rem;
+  --grande: 3rem;
+  --gigante: 4rem;
+
+  // Espaçamentos
+  --espacamento_pequeno: 12px;
+  --espacamento_medio: 30px;
+  --espacamento_extra-medio: 40px;
+  --espacamento_grande: 55px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-white);
+  font-size: var(--normal);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: var(--weight-regular);
+  background-color: var(--color-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+.carousel-inner {
+  max-width: 800px;
+  overflow: hidden;
+}

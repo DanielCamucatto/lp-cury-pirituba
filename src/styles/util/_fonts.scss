@@ -1,0 +1,27 @@
+// Fonte
+$visbyPath: "../../../public/fonts";
+
+@font-face {
+  font-family: "visbyMedium";
+  src: url("#{$visbyPath}/VisbyCF-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "visbyLight";
+  src: url("#{$visbyPath}/VisbyCF-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "visbyBold";
+  src: url("#{$visbyPath}/VisbyCF-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "visbyExtraBold";
+  src: url("#{$visbyPath}/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "visbyDemiBold";
+  src: url("#{$visbyPath}/VisbyCF-DemiBold.ttf") format("truetype");
+}

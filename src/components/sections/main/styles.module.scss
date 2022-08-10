@@ -1,0 +1,287 @@
+@import "../../../styles/util/media";
+@import "../../../styles/util/mixins";
+@import "../../../styles/util/fonts";
+
+$layout: "lMain";
+
+.#{$layout} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// Banner container
+.mainContainer {
+  background: url("/images/gallery-image.png") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: var(--espacamento_extra-medio);
+
+  // Opacidade
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      283deg,
+      rgba(45, 108, 136, 0.3127451664259454) 0%,
+      rgba(45, 108, 136, 0.3023810207676821) 90%
+    );
+    display: flex;
+    z-index: 1;
+  }
+}
+
+.container {
+  width: 100%;
+
+  @include d(tablet-up) {
+    max-width: 900px;
+    @include centerElement;
+  }
+}
+
+// Empreendimento container
+.mainInfos {
+  z-index: 2;
+  max-width: 420px;
+  color: white;
+  text-align: center;
+  background-image: radial-gradient(#00000044 30%, #00000000 70%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -40px;
+  @include centerElement;
+  left: -0.4rem;
+
+  // Efeito no texto
+  @include textEffect;
+
+  // Tablet-up
+  @include d(tablet-up) {
+    margin-left: initial;
+    margin-right: initial;
+    left: 100px;
+  }
+
+  // Logotipo
+  &__logo {
+    max-width: 286px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include d(tablet-up) {
+      text-align: left;
+      margin-left: inherit;
+      margin-right: inherit;
+      max-width: 336px;
+    }
+
+    // Nomes abaixo da logo
+    &_text {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-size: var(--normal);
+      padding-left: 0.5rem;
+
+      // Nome empreendimento
+      &_name {
+        font-weight: var(--weight-boldl);
+        font-size: var(--medio);
+        font-family: "visbyExtraBold";
+        letter-spacing: 3px;
+      }
+
+      // Desc
+      &_desc {
+        font-weight: var(--weight-regular);
+        font-size: var(--medio);
+        font-family: "visbyLight";
+        margin-top: -3px;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  // Dormitorios
+  &__dormitorios {
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: -35px;
+
+    @include d(tablet) {
+      margin-top: -30px;
+    }
+
+    // Quantidade
+    &_qtd {
+      font-size: 5rem;
+      //   font-weight: var(--weight-light);
+      margin-right: 0.5rem;
+      font-family: "visbyLight";
+
+      @include d(tablet) {
+        font-size: 7rem;
+      }
+    }
+    // Desc
+    &_qtd_desc {
+      font-size: 3rem;
+      font-weight: var(--weight-regullar);
+      position: relative;
+      top: -1.4rem;
+      font-family: "visbyDemiBold";
+
+      @include d(tablet) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  // Descrição dormitórios
+  &__descricao {
+    font-size: var(--normal);
+    font-weight: var(--weight-regular);
+    text-transform: uppercase;
+    margin-top: -16px;
+
+    @include d(tablet) {
+      margin-top: -26px;
+    }
+
+    & > p {
+      font-size: var(--normal);
+
+      @include d(tablet) {
+        font-size: var(--medio);
+      }
+    }
+
+    // Texto com icone do lado
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: initial;
+      margin-top: -20px;
+      font-size: var(--medio);
+      font-weight: var(--weight-regular);
+
+      &::before {
+        content: "+";
+        color: var(--color-white);
+        display: block;
+        margin-right: 3px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.effect {
+  width: 100%;
+
+  background-image: linear-gradient(
+    transparent 0%,
+    #00000088 40%,
+    #000000aa 100%
+  );
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  min-height: 200px;
+  padding: 0px 20px;
+}
+
+@keyframes LineRight {
+  0% {
+    margin-right: -200px;
+  }
+  100% {
+    margin-right: -50px;
+  }
+}
+
+.lineRight {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  img {
+    animation: LineRight 1s 1 ease-out;
+    margin-right: -50px;
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes LineLeft {
+  0% {
+    margin-left: -200px;
+  }
+  100% {
+    margin-left: -50px;
+  }
+}
+
+.lineLeft {
+  display: none;
+
+  @include d(tablet-up) {
+    display: flex;
+    position: absolute;
+    top: 50vh;
+    z-index: 3;
+  }
+
+  img {
+    transform: rotate(180deg);
+    will-change: margin-left;
+    animation: LineLeft 1s 1 forwards linear;
+  }
+}
+
+@keyframes ButtonAnimation {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 16px, 0);
+  }
+}
+
+.containerButtonScroll {
+  width: 100%;
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  bottom: 20px;
+  justify-content: center;
+  will-change: transform;
+  animation: ButtonAnimation 1.5s alternate linear infinite;
+
+  @include d(tablet) {
+    bottom: 40px;
+  }
+  // imagem
+  & img {
+    width: 46px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../styles/util/media";
+@import "../../styles/util/mixins";
+
+$layout: "lHeader";
+
+.#{$layout} {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-body);
+  padding-left: var(--espacamento_pequeno);
+  padding-right: var(--espacamento_pequeno);
+
+  @include d(tablet) {
+    padding-left: var(--espacamento_medio);
+    padding-right: var(--espacamento_medio);
+  }
+
+  // Modal header
+  &.lHeaderModal {
+    background: var(--color-bg-station);
+  }
+
+  // Logo wrapper
+  &__logo {
+    display: flex;
+    max-height: 56px;
+    @include centerElement;
+
+    & img {
+      width: 100%;
+    }
+
+    // Imagens
+    &_item {
+      &:not(:nth-last-child(1)) {
+        margin-right: var(--espacamento_medio);
+
+        @include d(tablet) {
+          margin-right: var(--espacamento_grande);
+        }
+      }
+    }
+  }
+}
