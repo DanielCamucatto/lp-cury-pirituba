@@ -59,5 +59,9 @@
   .boxTextLegal {
     padding: var(--espacamento_grande);
     font-size: var(--pequeno);
+    
+    span {
+      text-transform: uppercase;
+    }
   }
 }

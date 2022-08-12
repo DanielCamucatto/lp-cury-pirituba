@@ -104,7 +104,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     if (imagesDecorado1.length > 0) {
       galleries.push({
         id: "decorados-1",
-        label: "Decorado",
+        label: "Decorado 1",
         images: imagesDecorado1.map(image => path.join(
           config.absolutePathImages,
           "galerias",
@@ -114,18 +114,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
       });
     }
 
-    // if (imagesDecorado1.length > 0) {
-    //   galleries.push({
-    //     id: "decorados-2",
-    //     label: "Decorados 2",
-    //     images: imagesDecorado1.map(image => path.join(
-    //       config.absolutePathImages,
-    //       "galerias",
-    //       "DECORADO_2",
-    //       image.file
-    //     ))
-    //   });
-    // }
+    if (imagesDecorado1.length > 0) {
+      galleries.push({
+        id: "decorados-2",
+        label: "Decorado 2",
+        images: imagesDecorado1.map(image => path.join(
+          config.absolutePathImages,
+          "galerias",
+          "DECORADO_2",
+          image.file
+        ))
+      });
+    }
 
     if (imagesPerspectivas.length > 0) {
       galleries.push({

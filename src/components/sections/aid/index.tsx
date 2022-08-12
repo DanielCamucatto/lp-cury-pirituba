@@ -42,7 +42,7 @@ export const AidSection: FC = () => {
               height={70}
               layout="intrinsic"
             />
-            <span>Minha Casa Verde e Amarela</span>
+            <span>Programa Casa Verde e Amarela</span>
           </li>
         </ul>
       </div>

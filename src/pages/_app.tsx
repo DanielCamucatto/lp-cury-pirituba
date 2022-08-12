@@ -8,7 +8,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Green Lyne Pirituba - Lançamento</title>
+        <title>Silver Lyne Pirituba - Lançamento</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"

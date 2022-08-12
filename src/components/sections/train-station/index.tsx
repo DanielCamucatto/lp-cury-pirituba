@@ -98,7 +98,7 @@ export const TrainStationSection: FC = () => (
               layout="intrinsic"
             />
             <span>
-              <i>37 KM</i>
+              <i>3.7 KM</i>
               <strong>Do Tietê Plaza Shopping</strong>
             </span>
           </li>

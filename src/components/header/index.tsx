@@ -13,11 +13,10 @@ export const Header = ({ bgColor }: IHeader) => {
       }
     >
       <div className={styles.lHeader__logo}>
-        <div className={styles.lHeader__logo_item}>
+        <div className={styles.lHeader__logo_item__width}>
           <Image
-            src="/images/logo-cury-azul.svg"
-            // width={239}
-            // height={48}
+            src="/images/logo-cury-azul2.png"
+            width={190}
             alt="Logo Cury"
             layout="responsive"
           />
