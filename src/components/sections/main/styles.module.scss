@@ -120,10 +120,10 @@ $layout: "lMain";
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin-top: -35px;
+    margin-top: -10px;
 
     @include d(tablet) {
-      margin-top: -30px;
+      margin-top: -25px;
     }
 
     // Quantidade

@@ -15,14 +15,14 @@ export const Header = ({ bgColor }: IHeader) => {
       <div className={styles.lHeader__logo}>
         <div className={styles.lHeader__logo_item}>
           <Image
-            src="/images/v2/logo_cury.png"
-            width={239}
-            height={48}
+            src="/images/logo-cury-azul.svg"
+            // width={239}
+            // height={48}
             alt="Logo Cury"
             layout="responsive"
           />
         </div>
-        <div className={styles.lHeader__logo_item}>
+        <div className={styles.lHeader__logo_item__casa_viva}>
           <Image
             src="/images/v2/logo_casa-viva.png"
             width={168}

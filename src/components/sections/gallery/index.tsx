@@ -42,15 +42,15 @@ export const GallerySection: FC<GallerySectionProps> = ({ galleries }) => {
 
   return (
     <div className={styles.container}>
-      {/*   <div className={styles.title}>
+        <div className={styles.title}>
         <span>Mobilidade também no condomínio</span>
       </div>
 
       <div className={styles.separator}></div>
-*/}
+
       <div className={styles.containerRoot}>
         <div className={styles.containerGalleries}>
-          {/* <nav className={styles.navGallery}>
+          <nav className={styles.navGallery}>
             <ul>
               {galleries.map((gallery) => (
                 <li
@@ -70,7 +70,7 @@ export const GallerySection: FC<GallerySectionProps> = ({ galleries }) => {
                 </li>
               ))}
             </ul>
-          </nav> */}
+          </nav>
 
           <div className={styles.galleries}>
             {galleries.map((gallery) => (

@@ -110,6 +110,9 @@
   color: #696969;
   font-weight: 800;
   display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
   max-width: 500px;
   z-index: 2;
 
@@ -135,8 +138,8 @@
     }
 
     li {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
       font-size: var(--medio);
       justify-content: flex-start;
       align-items: center;

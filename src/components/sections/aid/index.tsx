@@ -15,7 +15,7 @@ export const AidSection: FC = () => {
               height={67}
               layout="intrinsic"
             />
-            <span>Ajuda do governo de até R$ 29 MIL</span>
+            <span>Subsídios de até 29mil"</span>
           </li>
           <li>
             <Image
@@ -37,16 +37,16 @@ export const AidSection: FC = () => {
           </li>
           <li>
             <Image
-              src="/images/icon-floor.png"
-              width={83}
-              height={53}
+              src="/images/logo-casa-va.png"
+              width={70}
+              height={70}
               layout="intrinsic"
             />
-            <span>Piso laminado nos dorms. *</span>
+            <span>Minha Casa Verde e Amarela</span>
           </li>
         </ul>
       </div>
-      <Image
+      {/* <Image
         src="/images/logo-casa-va.png"
         width={100}
         height={89}
@@ -55,7 +55,7 @@ export const AidSection: FC = () => {
       />
       <div className={styles.income}>
         <span>Programa Minha Casa Verde e Amarela</span>
-      </div>
+      </div> */}
       <div className={styles.line}></div>
       <div className={styles.phrase}>
         A melhor maneira de sair do aluguel e realizar seu sonho

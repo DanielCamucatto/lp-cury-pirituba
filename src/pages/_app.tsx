@@ -19,7 +19,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
         />
         <link
           rel="shortcut icon"
-          href="/images/v2/logo-lyne.png"
+          href="/images/logo-lyne.png"
           type="image/x-icon"
         />
         <script

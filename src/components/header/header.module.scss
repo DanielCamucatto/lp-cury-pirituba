@@ -5,11 +5,11 @@ $layout: "lHeader";
 
 .#{$layout} {
   width: 100%;
-  min-height: 80px;
+  // min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-body);
+  background-color: #cdd1d1;
   padding-left: var(--espacamento_pequeno);
   padding-right: var(--espacamento_pequeno);
 
@@ -26,8 +26,10 @@ $layout: "lHeader";
   // Logo wrapper
   &__logo {
     display: flex;
-    max-height: 56px;
-    @include centerElement;
+    justify-content: center; 
+    align-items: baseline; 
+    align-content: center;
+    margin: 0 auto ;
 
     & img {
       width: 100%;
@@ -42,6 +44,10 @@ $layout: "lHeader";
           margin-right: var(--espacamento_grande);
         }
       }
+      &__casa_viva{
+        padding-top: 11%;
+      }
     }
   }
 }
+
