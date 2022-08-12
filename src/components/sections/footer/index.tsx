@@ -24,7 +24,7 @@ export const FooterSection: FC = () => {
         <span>SIDES</span>
       </div>
       <div className={styles.boxTextLegal}>
-        <span>CASA VIVA ILHÉUS EMPREENDIMENTOS IMOBILIÁRIOS LTDA. (CONDOMÍNIO RESIDENCIAL SILVER LYNE PIRITUBA ).
+        <span>Casa Viva Ilhéus Empreendimentos Imobiliários LTDA. (Condomínio Residencial Silver Lyne Pirituba).
         </span><br></br>
         <span>Incorporação registrada em 06/07/2022, R.6 da matrícula 185.610 do 16º Oficial de Registro de Imóveis de São Paulo. </span> <br />
         <span> Responsável técnico: Ronaldo Cury de Capuá.</span>

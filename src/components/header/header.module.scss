@@ -14,8 +14,9 @@ $layout: "lHeader";
   padding-right: var(--espacamento_pequeno);
 
   @include d(tablet) {
-    padding-left: var(--espacamento_medio);
-    padding-right: var(--espacamento_medio);
+    padding: var(--espacamento_medio);
+    // padding-left: var(--espacamento_medio);
+    // padding-right: var(--espacamento_medio);
   }
 
   // Modal header
@@ -27,7 +28,7 @@ $layout: "lHeader";
   &__logo {
     display: flex;
     justify-content: center; 
-    align-items: baseline; 
+    align-items: center; 
     align-content: center;
     margin: 0 auto ;
 
@@ -45,10 +46,10 @@ $layout: "lHeader";
         }
       }
       &__casa_viva{
-        padding-top: 11%;
+        //padding-top: 10%;
       }
       &__width {
-        width: 14vw;
+        width: 264px;
       }
     }
   }

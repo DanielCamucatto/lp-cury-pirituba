@@ -15,8 +15,8 @@ export const Header = ({ bgColor }: IHeader) => {
       <div className={styles.lHeader__logo}>
         <div className={styles.lHeader__logo_item__width}>
           <Image
-            src="/images/logo-cury-azul2.png"
-            width={190}
+            src="/images/cury-azul3.png"
+            //width={190}
             alt="Logo Cury"
             layout="responsive"
           />
@@ -24,8 +24,8 @@ export const Header = ({ bgColor }: IHeader) => {
         <div className={styles.lHeader__logo_item__casa_viva}>
           <Image
             src="/images/v2/logo_casa-viva.png"
-            width={168}
-            height={56}
+            // width={168}
+            // height={56}
             alt="Logo Casa Viva"
             layout="responsive"
           />

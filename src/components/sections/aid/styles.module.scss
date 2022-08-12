@@ -128,7 +128,7 @@
     flex-direction: column;
     padding-left: var(--espacamento_pequeno);
     padding-right: var(--espacamento_pequeno);
-    margin-bottom: var(--espacamento_extra-medio);
+    
 
     @include d(tablet-up) {
       flex-direction: row;
