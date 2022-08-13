@@ -35,7 +35,7 @@ export const AidSection: FC = () => {
             />
             <span>Escritura + ITBI Grátis *</span>
           </li>
-          <li>
+          <li className={styles.logoCasaVerdeAmarela}>
             <Image
               src="/images/logo-casa-va.png"
               width={70}

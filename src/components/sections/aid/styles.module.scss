@@ -81,9 +81,11 @@
 }
 
 .logoCasaVerdeAmarela {
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
+    @media screen and (max-width: 939px) {
+      padding: 0px !important;
+      display: flex;
+      flex-direction: column;
+    }
 
   img {
     max-width: 100%;
@@ -152,6 +154,13 @@
 
       &:not(:nth-last-child(1)) {
         margin-bottom: var(--espacamento_medio);
+        padding: 10px 60px 0 0 ;
+
+        @media screen and (max-width: 939px) {
+          padding: 0px !important;
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       span {
